@@ -66,13 +66,13 @@ public class Clicker2 {
 
 	static Thread thread1 = new Thread() {
 		public void run() {
-			otevriMysky(driverStanda, "st.jindrich", "konami");
+			otevriMysky(driverStanda, "", "");
 		}
 	};
 
 	static Thread thread2 = new Thread() {
 		public void run() {
-			otevriMysky(driverAnicka, "anna.zlonicka", "skritek");
+			otevriMysky(driverAnicka, "", "");
 		}
 	};
 
@@ -90,9 +90,9 @@ public class Clicker2 {
 			e1.printStackTrace();
 		}
 		// login
-		driver.findElement(By.name("accountName")).sendKeys(jmeno);
-		driver.findElement(By.name("password")).sendKeys(heslo);
-		driver.findElement(By.name("doLogin")).click();
+		//driver.findElement(By.name("accountName")).sendKeys(jmeno);
+		//driver.findElement(By.name("password")).sendKeys(heslo);
+		//driver.findElement(By.name("doLogin")).click();
 		// pokud je po spuštìní denní truhla
 		kontrolaTruhly(driver);
 		while (!driver.getPageSource().contains("Welcome")) {
